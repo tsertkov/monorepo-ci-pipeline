@@ -3,6 +3,8 @@
 #set -eo pipefail
 env
 
+git branch | grep \* | cut -d ' ' -f2
+
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git diff-tree --no-commit-id --name-only -r HEAD \
   | grep / \
