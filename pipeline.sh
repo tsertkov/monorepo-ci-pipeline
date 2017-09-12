@@ -8,6 +8,7 @@ else
   BRANCH=$(git rev-parse --abbrev-ref HEAD)
 fi
 
+git diff-tree --no-commit-id --name-only -r HEAD
 git diff-tree --no-commit-id --name-only -r HEAD \
   | grep / \
   | cut -d / -f 1 \
