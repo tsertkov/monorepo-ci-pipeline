@@ -3,9 +3,13 @@
 #set -eo pipefail
 env
 
-git branch
 
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ ! -z "$TRAVIS_BRANCH" ]; then
+  BRANCH="$TRAVIS_BRANCH"
+else
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+fi
+
 git diff-tree --no-commit-id --name-only -r HEAD \
   | grep / \
   | cut -d / -f 1 \
