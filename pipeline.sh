@@ -4,7 +4,10 @@ set -eo pipefail
 
 git rev-parse --abbrev-ref HEAD
 git diff-tree --no-commit-id --name-only -r HEAD
-
+which grep
+which cut
+which uniq
+which xargs
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git diff-tree --no-commit-id --name-only -r HEAD \
