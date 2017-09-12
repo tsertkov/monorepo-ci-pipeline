@@ -3,8 +3,7 @@
 #set -eo pipefail
 env
 
-git branch | grep \* | cut -d ' ' -f2
-git symbolic-ref --short HEAD
+git branch
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git diff-tree --no-commit-id --name-only -r HEAD \
