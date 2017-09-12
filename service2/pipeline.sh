@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Service2 pipeline"
+echo "/service2/pipeline.sh $@"
 
 case "$1" in
   "master")
