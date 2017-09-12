@@ -1,4 +1,3 @@
-language: python
 jobs:
   include:
     - script: ./pipeline.sh
