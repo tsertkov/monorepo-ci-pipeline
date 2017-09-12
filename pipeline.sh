@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -e
-env
 
 if [ ! -z "$TRAVIS_BRANCH" ]; then
   BRANCH="$TRAVIS_BRANCH"
