@@ -2,13 +2,6 @@
 
 set -eo pipefail
 
-git rev-parse --abbrev-ref HEAD
-git diff-tree --no-commit-id --name-only -r HEAD
-which grep
-which cut
-which uniq
-which xargs
-
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git diff-tree --no-commit-id --name-only -r HEAD \
   | grep / \
@@ -17,3 +10,5 @@ git diff-tree --no-commit-id --name-only -r HEAD \
   | xargs -L 1 -I {} \
     bash -c \
       'cd "{}" && test -x pipeline.sh && ./pipeline.sh "$@"' _ "$BRANCH"
+
+exit 0
