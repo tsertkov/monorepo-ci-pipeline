@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 #set -eo pipefail
+env
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git diff-tree --no-commit-id --name-only -r HEAD \
