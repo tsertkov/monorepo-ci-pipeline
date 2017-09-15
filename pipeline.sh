@@ -18,7 +18,7 @@ runPipelines () {
 
 if [ "$CURRENT_BRANCH" = "master" ]; then
   # execute pipeline for all services
-  runPipelines "$(find . -type d -depth 1 -and -not -name '.*')"
+  runPipelines "$(find . -depth 1 -type d -and -not -name '.*')"
 else
   # executes pipeline only for updated services in current branch
   # assumes that current branch was forked from master
