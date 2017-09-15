@@ -1,3 +1,1 @@
-jobs:
-  include:
-    - script: ./pipeline.sh
+script: ./pipeline.sh
