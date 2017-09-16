@@ -2,6 +2,9 @@
 
 set -e
 
+git status
+git branch -avv
+
 git symbolic-ref --quiet --short HEAD || echo 'HEAD is not symbolic-ref'
 git show-ref --heads
 
