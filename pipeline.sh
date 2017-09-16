@@ -2,6 +2,8 @@
 
 set -e
 
+git show-ref --heads
+
 CURRENT_BRANCH=$(
   git symbolic-ref --quiet --short HEAD \
     || git show-ref --heads \
