@@ -5,6 +5,8 @@ set -e
 git symbolic-ref --quiet --short HEAD || echo 'HEAD is not symbolic-ref'
 git show-ref --heads
 
+env
+
 CURRENT_BRANCH=$(
   git symbolic-ref --quiet --short HEAD \
     || git show-ref --heads \
