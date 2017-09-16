@@ -2,7 +2,7 @@
 
 set -e
 
-git symbolic-ref --quiet --short HEAD
+git symbolic-ref --quiet --short HEAD || echo 'HEAD is not symbolic-ref'
 git show-ref --heads
 
 CURRENT_BRANCH=$(
