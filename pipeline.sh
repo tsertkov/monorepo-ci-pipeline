@@ -2,6 +2,8 @@
 
 set -ev
 
+git ls-remote --refs --quiet origin merge
+
 git status
 git branch -avv
 
