@@ -2,6 +2,8 @@
 
 set -ev
 
+git merge HEAD
+
 git status
 git branch -avv
 
