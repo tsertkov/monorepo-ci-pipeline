@@ -10,7 +10,6 @@ git branch -avv
 git symbolic-ref --quiet --short HEAD || echo 'HEAD is not symbolic-ref'
 git rev-parse HEAD
 git show-ref
-git show-ref --heads
 
 env
 
